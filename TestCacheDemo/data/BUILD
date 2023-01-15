@@ -1,4 +1,5 @@
 
 exports_files([
-    "ThePhilosophersStone.txt"
+    "ThePhilosophersStone.txt",
+    "ThePhilosophersStoneStopWordsRemoved.txt"
 ])
