@@ -7,6 +7,3 @@ def remove_punctuation(string):
     }
     
     return filter(string, punctuations)
-
-
-# open("data/ThePhilosophersStonePunctuationsRemoved.txt", "w").write(remove_punctuation(open("data/ThePhilosophersStone.txt").read()))
