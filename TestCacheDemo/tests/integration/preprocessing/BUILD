@@ -1,9 +1,9 @@
 
 py_test(
-    name = "test_clean_data_input",
-    srcs=["test_clean_data_input.py"],
+    name = "test_stop_words_input",
+    srcs=["test_stop_words_input.py"],
     deps=[
-        "//src/preprocessing:clean_data"
+        "//src/preprocessing:stop_words"
     ],
     data=[
         "//data:ThePhilosophersStone.txt"
@@ -11,13 +11,25 @@ py_test(
 )
 
 py_test(
-    name = "test_clean_data_input_output",
-    srcs=["test_clean_data_input_output.py"],
+    name = "test_stop_words_input_output",
+    srcs=["test_stop_words_input_output.py"],
     deps=[
-        "//src/preprocessing:clean_data"
+        "//src/preprocessing:stop_words"
     ],
     data=[
         "//data:ThePhilosophersStone.txt",
         "//data:ThePhilosophersStoneStopWordsRemoved.txt"
+    ]
+)
+
+
+py_test(
+    name = "test_punctuation_input",
+    srcs=["test_punctuation_input.py"],
+    deps=[
+        "//src/preprocessing:punctuation"
+    ],
+    data=[
+        "//data:ThePhilosophersStone.txt"
     ]
 )

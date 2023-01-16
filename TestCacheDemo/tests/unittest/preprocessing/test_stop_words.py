@@ -1,10 +1,10 @@
 import time
 import unittest
 
-from src.preprocessing.clean_data import remove_stop_words
+from src.preprocessing.stop_words import remove_stop_words
 
 
-class TestCleanData(unittest.TestCase):
+class TestStopWords(unittest.TestCase):
 
     def test_remove_stop_words(self):
         time.sleep(1)
