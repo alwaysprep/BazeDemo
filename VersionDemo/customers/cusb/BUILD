@@ -5,7 +5,7 @@ py_binary(
     name="app",
     srcs=["app.py"],
     deps=[
-        requirement("libx-alwaysprep"),
-        "//src/liby"
+        requirement("liby-alwaysprep"),
+        "//src/libx"
     ]
 )

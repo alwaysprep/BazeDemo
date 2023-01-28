@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name="core-alwaysprep",
     description = "A small example package",
-    version="0.1.0",
+    version="0.2.0",
     author="alwaysprep",
     author_email="alwaysprep@gmail.com",
     package_dir={'src/core': '.'},
@@ -17,7 +17,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'Flask==2.0.0',
+        'Flask==2.2.2',
     ],
     extras_require={
         "dev": [
