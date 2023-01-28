@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name="liby-alwaysprep",
     description = "A small example package",
-    version="0.1.2",
+    version="0.2.0",
     author="alwaysprep",
     author_email="alwaysprep@gmail.com",
     package_dir={'src/liby': '.'},
