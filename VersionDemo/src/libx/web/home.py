@@ -11,5 +11,6 @@ home = Blueprint('home', __name__)
 def print_hello():
     return {
         "time": get_curent_time(),
-        "numpy array": (numpy.arange(10)**2).tolist()
+        "numpy array": (numpy.arange(10)**2).tolist(),
+        "numpy": numpy.__version__
     }

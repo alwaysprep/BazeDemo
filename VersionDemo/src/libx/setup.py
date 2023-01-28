@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     name="libx-alwaysprep",
     description = "A small example package",
-    version="0.1.0",
+    version="0.2.0",
     author="alwaysprep",
     author_email="alwaysprep@gmail.com",
     package_dir={'src/libx': '.'},
@@ -18,7 +18,7 @@ setup(
     ],
     install_requires=[
         'core-alwaysprep==0.1.0',
-        'numpy==1.23'
+        'numpy==1.24.1'
     ],
     extras_require={
         "dev": [
