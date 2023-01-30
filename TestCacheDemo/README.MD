@@ -7,13 +7,13 @@
 bazel test //...
 ```
 
-## Run unittests
+## Run only unittests
 
 ```posix-terminal
 bazel test //tests/unittest/...
 ```
 
-## Run integration tests
+## Run only integration tests
 
 ```posix-terminal
 bazel test //tests/integration/...
