@@ -25,7 +25,8 @@ In order to create dependency graphs with bazel you should install graphviz.
 
 ### Single integration test
 
-![Alt text](./images/test_punctuation_stop_words_input_output.svg)
+<img src="./images/test_punctuation_stop_words_input_output.svg">
+
 Dependency graph of test_punctuation_stop_words_input_output test
 
 ```posix-terminal
@@ -34,7 +35,8 @@ bazel query "deps(//tests/integration/preprocessing:test_punctuation_stop_words_
 
 ### All unittests
 
-![Alt text](./images/unittest.svg)
+<img src="./images/unittest.svg">
+
 Dependency graph of all unittests
 
 ```posix-terminal
