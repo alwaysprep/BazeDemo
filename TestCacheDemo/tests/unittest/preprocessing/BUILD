@@ -7,7 +7,7 @@ py_test(
 py_test(
     name = "test_filter_word",
     srcs=["test_filter_word.py"],
-    deps=["//src/preprocessing/filter:filter"],
+    deps=["//src/preprocessing/filter:filter_words"],
 )
 
 py_test(
