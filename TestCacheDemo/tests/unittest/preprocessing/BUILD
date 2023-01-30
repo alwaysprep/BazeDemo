@@ -1,3 +1,14 @@
+py_test(
+    name = "test_filter",
+    srcs=["test_filter.py"],
+    deps=["//src/preprocessing/filter:filter"],
+)
+
+py_test(
+    name = "test_filter_word",
+    srcs=["test_filter_word.py"],
+    deps=["//src/preprocessing/filter:filter"],
+)
 
 py_test(
     name = "test_stop_words",
