@@ -87,16 +87,41 @@ load("@io_bazel_rules_k8s//k8s:k8s.bzl", "k8s_repositories", "k8s_defaults")
 
 k8s_repositories()
 
+_LOCAL_CLUSTER = "docker-desktop"
+_PROD_CLUSTER = "gke_project_name_us-central1_cluste_name"
+
 k8s_defaults(
-    name = "k8s_deploy",
+    name = "k8s_dev_deploy",
     kind = "deployment",
-    cluster="docker-desktop",
+    # This is the name of the cluster as it appears in:
+    #   kubectl config view --minify -o=jsonpath='{.contexts[0].context.cluster}'
+    cluster=_LOCAL_CLUSTER,
     image_chroot = "localhost:9000/rules_k8s",
 )
 
 k8s_defaults(
-    name = "k8s_service",
+    name = "k8s_dev_service",
     kind = "service",
-    cluster="docker-desktop",
+    # This is the name of the cluster as it appears in:
+    #   kubectl config view --minify -o=jsonpath='{.contexts[0].context.cluster}'
+    cluster=_LOCAL_CLUSTER,
     image_chroot = "localhost:9000/rules_k8s",
+)
+
+k8s_defaults(
+    name = "k8s_prod_deploy",
+    kind = "deployment",
+    # This is the name of the cluster as it appears in:
+    #   kubectl config view --minify -o=jsonpath='{.contexts[0].context.cluster}'
+    cluster = _PROD_CLUSTER,
+    image_chroot = "us.gcr.io/project_name",
+)
+
+k8s_defaults(
+    name = "k8s_prod_deploy",
+    kind = "service",
+    # This is the name of the cluster as it appears in:
+    #   kubectl config view --minify -o=jsonpath='{.contexts[0].context.cluster}'
+    cluster = _PROD_CLUSTER,
+    image_chroot = "us.gcr.io/project_name",
 )
