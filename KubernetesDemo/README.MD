@@ -17,16 +17,10 @@ Go Preferences -> Kuberenetes -> Enable Kubernetes -> Apply
 
 # For Linux
 
-## 3) Install minikube
+## 3) Install & Run minikube
 https://minikube.sigs.k8s.io/docs/start/
 
-## 4) Run minikube
+### 4) Update cluster name to minikube
 
-```posix-terminal
-minikube start
-```
-
-### 5) Update cluster name to minikube
-
-- Go WORKSPACE
+- Go to WORKSPACE
 - update _LOCAL_CLUSTER to "minikube"
