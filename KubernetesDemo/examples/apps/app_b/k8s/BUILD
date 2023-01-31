@@ -6,15 +6,12 @@ load("@k8s_dev_service//:defaults.bzl", "k8s_dev_service")
 
 package(default_visibility = ["//visibility:public"])
 
-exports_files([
-        "app_b.conf.json"
-])
 
 jsonnet_to_json(
     name = "deployment_json",
     src = "//examples/k8s:deployment.jsonnet",
     outs = ["cusa.deployment.json"],
-    tla_code_files = {":app_b.conf.json": "app_conf"}
+    tla_code_files = {"//examples/apps/app_b:app_b.conf.json": "app_conf"}
 )
 
 
@@ -22,7 +19,7 @@ jsonnet_to_json(
     name = "service_json",
     src = "//examples/k8s:service.jsonnet",
     outs = ["cusa.service.json"],
-    tla_code_files = {":app_b.conf.json": "app_conf"}
+    tla_code_files = {"//examples/apps/app_b:app_b.conf.json": "app_conf"}
 )
 
 

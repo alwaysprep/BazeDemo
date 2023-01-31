@@ -12,5 +12,8 @@ py3_image(
     deps=[
         "//src:home",
         "//src:about"
-    ]    
+    ],
+    data=[
+        "//examples/apps/app_a:app_a.conf.json"
+    ]
 )
