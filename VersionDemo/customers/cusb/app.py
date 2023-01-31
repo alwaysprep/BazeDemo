@@ -5,6 +5,7 @@ from flask import Flask
 import flask
 import numpy
 
+import src.core as core
 import src.libx as libx
 import src.liby as liby
 
@@ -21,6 +22,7 @@ def print_hello():
     return {
         "libx": libx.__version__,
         "liby": liby.__version__,
+        "core": core.__version__,
         "flask": flask.__version__,
         "numpy": numpy.__version__,
         "python": sys.version
